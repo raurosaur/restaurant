@@ -1,0 +1,26 @@
+{
+  "name": "the_odin_project",
+  "version": "1.0.0",
+  "description": "Restaurant Page",
+  "main": "main.js",
+  "private": true,
+  "mode": "development",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/raurosaur/restaurant.git"
+  },
+  "author": "raurosaur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raurosaur/restaurant/issues"
+  },
+  "homepage": "https://github.com/raurosaur/restaurant#readme",
+  "devDependencies": {
+    "webpack": "^5.12.2",
+    "webpack-cli": "^4.3.1"
+  }
+}
