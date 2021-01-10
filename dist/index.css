@@ -9,8 +9,7 @@ body{
     font-family: Helvetica, sans-serif;
 }
 header{
-    background: url('header.jpg');
-    background-size: 100vw 40vh;
+    background: url('leaves.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,11 +42,17 @@ nav a:hover{
     justify-content: space-around;
     align-items: center;
     background: linear-gradient(0deg, rgba(0,0,0,0.5),  rgba(0,0,0,0.5)),
-        url('restaurant.jpg');
+        url('https://raw.githubusercontent.com/raurosaur/restaurant/main/dist/restaurant.jpg');
     background-size: 100vw 150vh;
     height: 100vh;
-}   
 
+}   
+@media (max-width: 600px) {
+    .container{
+        height: 200vh;
+        flex-direction: column; 
+    }
+}
 .about{
     background-color: none;
     height: 600px;

@@ -1,6 +1,8 @@
 //Supporting docs
 import {home} from './home.js';
 import {menu} from './menu.js';
+import {contact} from './contact.js'
+
 //Container
 const content = document.getElementById('content');
 const container = document.createElement('div');
@@ -17,19 +19,20 @@ header.appendChild(h2);
 const navBar = document.createElement('nav'),
 homeBar = document.createElement('a'),
 menuBar = document.createElement('a'),
-contact = document.createElement('a');
+contactBar = document.createElement('a');
 
 homeBar.innerText = 'Home';
 menuBar.innerText = 'Menu';
-contact.innerText = 'Contact Us';
+contactBar.innerText = 'Contact Us';
 
 //Events
 homeBar.addEventListener('click', () => {home(container)});
 menuBar.addEventListener('click', () => {menu(container)});
+contactBar.addEventListener('click', () => {contact(container)});
 
 navBar.appendChild(homeBar);
 navBar.appendChild(menuBar);
-navBar.appendChild(contact);
+navBar.appendChild(contactBar);
 content.appendChild(navBar);
 
 content.appendChild(container);

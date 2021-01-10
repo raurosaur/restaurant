@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"contact\": () => /* binding */ contact\n/* harmony export */ });\nconst contact = function (container) {\n    container.innerHTML = '';\n    container.style.background = 'black';\n    container.style.height = '65vh';\n};\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"home\": () => /* binding */ home\n/* harmony export */ });\n/* harmony import */ var _text_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text.js */ \"./src/text.js\");\n\n\nconst home = function(container){\n    container.innerHTML = '';\n    container.backgroundColor = 'none';\n    const col1 = document.createElement('div'),\n        col2 = document.createElement('div');\n\n    col1.classList.add('about');\n    col2.classList.add('about');\n\n    col1.innerText = _text_js__WEBPACK_IMPORTED_MODULE_0__.column1;\n    col2.innerText = _text_js__WEBPACK_IMPORTED_MODULE_0__.column2;\n\n    container.appendChild(col1);\n    container.appendChild(col2);\n}\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"home\": () => /* binding */ home\n/* harmony export */ });\n/* harmony import */ var _text_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text.js */ \"./src/text.js\");\n\n\nconst home = function(container){\n    container.innerHTML = '';\n    container.style.background = \"linear-gradient(0deg, rgba(0,0,0,0.5),  rgba(0,0,0,0.5)), url('https://raw.githubusercontent.com/raurosaur/restaurant/main/dist/restaurant.jpg')\";\n    container.style.backgroundSize = '100vw 150vh';\n    container.style.height = '100vh';\n\n    const col1 = document.createElement('div'),\n        col2 = document.createElement('div');\n\n    col1.classList.add('about');\n    col2.classList.add('about');\n\n    col1.innerText = _text_js__WEBPACK_IMPORTED_MODULE_0__.column1;\n    col2.innerText = _text_js__WEBPACK_IMPORTED_MODULE_0__.column2;\n\n    container.appendChild(col1);\n    container.appendChild(col2);\n}\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/home.js?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n//Supporting docs\n\n\n//Container\nconst content = document.getElementById('content');\nconst container = document.createElement('div');\ncontainer.classList.add('container');\n\n//Header\nconst header = document.createElement('header'),\nh2 = document.createElement('h2');\nh2.innerText = 'Restaurant';\ncontent.appendChild(header);\nheader.appendChild(h2);\n\n//Nav Bar\nconst navBar = document.createElement('nav'),\nhomeBar = document.createElement('a'),\nmenuBar = document.createElement('a'),\ncontact = document.createElement('a');\n\nhomeBar.innerText = 'Home';\nmenuBar.innerText = 'Menu';\ncontact.innerText = 'Contact Us';\n\n//Events\nhomeBar.addEventListener('click', () => {(0,_home_js__WEBPACK_IMPORTED_MODULE_0__.home)(container)});\nmenuBar.addEventListener('click', () => {(0,_menu_js__WEBPACK_IMPORTED_MODULE_1__.menu)(container)});\n\nnavBar.appendChild(homeBar);\nnavBar.appendChild(menuBar);\nnavBar.appendChild(contact);\ncontent.appendChild(navBar);\n\ncontent.appendChild(container);\n\n//Text\n(0,_home_js__WEBPACK_IMPORTED_MODULE_0__.home)(container);\n\n//Footer\nconst footer = document.createElement('footer');\nfooter.innerText = \"Created by @raurosaur\";\ncontent.appendChild(footer);\n\n//# sourceURL=webpack://the_odin_project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n//Supporting docs\n\n\n\n\n//Container\nconst content = document.getElementById('content');\nconst container = document.createElement('div');\ncontainer.classList.add('container');\n\n//Header\nconst header = document.createElement('header'),\nh2 = document.createElement('h2');\nh2.innerText = 'Restaurant';\ncontent.appendChild(header);\nheader.appendChild(h2);\n\n//Nav Bar\nconst navBar = document.createElement('nav'),\nhomeBar = document.createElement('a'),\nmenuBar = document.createElement('a'),\ncontactBar = document.createElement('a');\n\nhomeBar.innerText = 'Home';\nmenuBar.innerText = 'Menu';\ncontactBar.innerText = 'Contact Us';\n\n//Events\nhomeBar.addEventListener('click', () => {(0,_home_js__WEBPACK_IMPORTED_MODULE_0__.home)(container)});\nmenuBar.addEventListener('click', () => {(0,_menu_js__WEBPACK_IMPORTED_MODULE_1__.menu)(container)});\ncontactBar.addEventListener('click', () => {(0,_contact_js__WEBPACK_IMPORTED_MODULE_2__.contact)(container)});\n\nnavBar.appendChild(homeBar);\nnavBar.appendChild(menuBar);\nnavBar.appendChild(contactBar);\ncontent.appendChild(navBar);\n\ncontent.appendChild(container);\n\n//Text\n(0,_home_js__WEBPACK_IMPORTED_MODULE_0__.home)(container);\n\n//Footer\nconst footer = document.createElement('footer');\nfooter.innerText = \"Created by @raurosaur\";\ncontent.appendChild(footer);\n\n//# sourceURL=webpack://the_odin_project/./src/index.js?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hom
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"menu\": () => /* binding */ menu\n/* harmony export */ });\nconst menu = function(container){\n    container.innerHTML = '';\n    container.style.background = 'none';\n};\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"menu\": () => /* binding */ menu\n/* harmony export */ });\nconst menu = function(container){\n    container.innerHTML = '';\n    container.style.background = 'none';\n    container.style.height = '100vh';\n\n};\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/menu.js?");
 
 /***/ }),
 
