@@ -16,7 +16,7 @@
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"contact\": () => /* binding */ contact\n/* harmony export */ });\nconst contact = function (container) {\n    container.innerHTML = '';\n    container.style.background = 'black';\n    container.style.height = '65vh';\n};\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/contact.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"contact\": () => /* binding */ contact\n/* harmony export */ });\nconst contact = function (container) {\n    container.innerHTML = '';\n    container.style.background = '#011C41';\n    container.style.height = '65vh';\n\n    const contactInfo = document.createElement('div');\n\n    Object.assign(contactInfo.style, {\n        display: 'flex',\n        justifyContent: 'center',\n        alignItems: 'center',\n        background: '#D1DDEC',\n        color: '#011C41',\n        height: '60vh',\n        width: '50vh',\n        borderRadius: '40px',\n        fontWeight: '900',\n        lineHeight: '40px'\n    });\n\n    contactInfo.innerHTML = `\n    Address: 32/A BCD Street, XYZ Alley, JK-07<br>\n    Contact: 223-001-345<br>\n    Email: abc@restaurant.com\n    `;\n\n    container.appendChild(contactInfo);\n};\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/contact.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"home\": () => /* binding */ home\n/* harmony export */ });\n/* harmony import */ var _text_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text.js */ \"./src/text.js\");\n\n\nconst home = function(container){\n    container.innerHTML = '';\n    container.style.background = \"linear-gradient(0deg, rgba(0,0,0,0.5),  rgba(0,0,0,0.5)), url('https://raw.githubusercontent.com/raurosaur/restaurant/main/dist/restaurant.jpg')\";\n    container.style.backgroundSize = '100vw 150vh';\n    container.style.height = '100vh';\n\n    const col1 = document.createElement('div'),\n        col2 = document.createElement('div');\n\n    col1.classList.add('about');\n    col2.classList.add('about');\n\n    col1.innerText = _text_js__WEBPACK_IMPORTED_MODULE_0__.column1;\n    col2.innerText = _text_js__WEBPACK_IMPORTED_MODULE_0__.column2;\n\n    container.appendChild(col1);\n    container.appendChild(col2);\n}\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"home\": () => /* binding */ home\n/* harmony export */ });\n/* harmony import */ var _text_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text.js */ \"./src/text.js\");\n\n\nconst home = function(container){\n    container.innerHTML = '';\n    container.style.background = \"linear-gradient(0deg, rgba(0,0,0,0.2),  rgba(0,0,0,0.2)), url('https://restaurantengine.com/wp-content/uploads/2015/05/startup-restaurants-typically-overspend.jpg')\";\n    container.style.backgroundSize = '100vw 150vh';\n    container.style.height = '100vh';\n    container.style.flexDirection = 'row';\n\n    const col1 = document.createElement('div'),\n        col2 = document.createElement('div');\n\n    col1.classList.add('about');\n    col2.classList.add('about');\n\n    col1.innerText = _text_js__WEBPACK_IMPORTED_MODULE_0__.column1;\n    col2.innerText = _text_js__WEBPACK_IMPORTED_MODULE_0__.column2;\n\n    container.appendChild(col1);\n    container.appendChild(col2);\n}\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/home.js?");
 
 /***/ }),
 
@@ -40,13 +40,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hom
 
 /***/ }),
 
+/***/ "./src/items.js":
+/*!**********************!*\
+  !*** ./src/items.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Items\": () => /* binding */ Items\n/* harmony export */ });\nclass Item{\n    constructor(name, desc, cost, vegan = false){\n        this.name = name;\n        this.desc = desc;\n        this.cost = cost;\n        this.vegan = vegan;\n    }\n    toString(){\n       return `\\n${this.desc}\n    --------------- $${this.cost}`; \n    }\n}\n\nconst Items = \n[new Item('Ploughman\\'s', 'Serves 2\\nA feast of English cheese, crusty bread, field green salad, roasted tomatoes, cornichon pickles, apple beet salad,\\nbranston pickle & scotch egg', 21.99),\nnew Item('Banger', 'Roasted English sausage, mustard aioli, roasted tomatoes, sauteed cabbage and onions on a crusted baguette' ,12.99),\nnew Item('Macaroni Cheese','',7.49),\nnew Item('Pumpkin Juice', '', 4.99, true),\nnew Item('Sticky Toffee Pudding', '', 7.49),\n];\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/items.js?");
+
+/***/ }),
+
 /***/ "./src/menu.js":
 /*!*********************!*\
   !*** ./src/menu.js ***!
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"menu\": () => /* binding */ menu\n/* harmony export */ });\nconst menu = function(container){\n    container.innerHTML = '';\n    container.style.background = 'none';\n    container.style.height = '100vh';\n\n};\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"menu\": () => /* binding */ menu\n/* harmony export */ });\n/* harmony import */ var _items_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./items.js */ \"./src/items.js\");\n\n\nconst menu = function(container){\n    container.innerHTML = '';\n    Object.assign(container.style, {\n        background: '#042D65',\n        height: '200vh',\n        flexDirection: 'column' \n    });\n\n    for(let item of _items_js__WEBPACK_IMPORTED_MODULE_0__.Items){\n    let menuItem = document.createElement('div');\n    let h2 = document.createElement('h2');\n    h2.textContent = item.name + '\\n';\n\n    menuItem.appendChild(h2);\n    menuItem.innerText += item.toString();\n    Object.assign(menuItem.style,{\n        display: 'flex',\n        justifyContent: 'center',\n        alignItems: 'center',\n        textAlign: 'justify',\n        width: '80vw',\n        height: '150px',\n        background: '#D1DDEC',\n        borderRadius: '30px',\n        color: '#042D65',\n    });\n\n    h2.style.color = 'white';\n    h2.style.textAlign = 'center';\n    h2.style.fontSize = '400px !important';\n\n    container.appendChild(menuItem);\n    }\n};\n\n\n\n//# sourceURL=webpack://the_odin_project/./src/menu.js?");
 
 /***/ }),
 
